@@ -1,36 +1,21 @@
 <html>
-<head>
-<style>
-/* CSS general */
-.mi-iframe {
-  width: 100px;
-  height: 50px;
-}
-
-/* CSS pantallas de 320px o superior */
-@media (min-width: 320px) {
-
-  .mi-iframe {
-    width: 200px;
-    height: 150px;
-  } 
-
-}
-
-/* CSS pantalla 768px o superior */
-@media (min-width: 768px) {
-
-  .mi-iframe {
-    width: 500px;
-    height: 350px;
-  } 
-
-}
-</style>
-</head>
-<body>
-<center>
-<div class="mi-iframe"><iframe src="https://forms.nefertalia.com/form/5f5675f96f2d7d0023f3b15a" frameborder="0"></iframe></div>
-</center>
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html, body, iframe {
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-device-width: 740px) {
+        .desktop-iframe { display: none; }
+      }
+      @media (min-device-width: 741px) {
+        .iphone-iframe { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <iframe class='iphone-iframe' scrolling='no' src='https://forms.nefertalia.com/form/5f5675f96f2d7d0023f3b15a'></iframe>
+    <iframe class='desktop-iframe' src='https://forms.nefertalia.com/form/5f5675f96f2d7d0023f3b15a'></iframe>
+  </body>
 </html>
