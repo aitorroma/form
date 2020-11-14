@@ -27,36 +27,25 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/avatar.png">
   <style>
-    img.avatar {
-      border: 2px solid black;
-      border-radius: 50%;
-    }
-    a.small {
-      background: #1DA1F2;
-      border-radius: 50px;
-      font-size: 18px;
-      text-align: center;
-      text-decoration: none;
-      height: 48px;
-      padding: 0 16px;
-      text-align: center;
-      vertical-align: middle;
-      font-size: 18px;
-      width: 300px;
-      font-weight: 600;
-      line-height: 48px;
-      letter-spacing: 0.5px;
-      background-color: transparent;
-      border-radius: 8px;
-      cursor: pointer;
-      box-sizing: border-box;
-    }
-    footer {
-      text-align: center;
-      padding: 3px;
-      color: white;
-      font-size: 12px;
-    }
+    .video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
   </style>
 
 </head>
@@ -74,8 +63,10 @@
         <h1>SharingAway</h1>
 
         <!-- Short Bio -->
+        <div class="video-container">
         <iframe width="640" height="360" src="https://www.youtube.com/embed/uKeb6fHbnWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <br>
+      </div>
+        <br>
       <br>
         <p>Aprende cómo personas inician sus negocios, los hacen crecer y cuáles fueron sus grandes errores. #growth #nocode</p>
       
