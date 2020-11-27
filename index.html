@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "1f400687-f9fd-4551-9508-7bf58b2dff50",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
 <style>
 .community__logo img {
     max-height: 30px;
